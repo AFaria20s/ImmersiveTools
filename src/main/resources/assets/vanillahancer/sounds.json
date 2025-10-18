@@ -1,0 +1,9 @@
+{
+  "pickaxe_level_up": {
+    "category": "player",
+    "subtitle": "vanillahancer.pickaxe_level_up",
+    "sounds": [
+      "vanillahancer:pickaxe_level_up"
+    ]
+  }
+}
