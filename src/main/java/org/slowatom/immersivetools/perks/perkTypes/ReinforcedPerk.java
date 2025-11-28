@@ -50,30 +50,14 @@ public class ReinforcedPerk extends BasePerk {
 
     @Override
     public void onBlockBreak(PlayerEntity player, ItemStack tool, BlockEvent.BreakEvent event) {
-        // Esta lógica deve rodar APENAS no servidor para evitar dessincronização.
-        if (player.world.isRemote || !(player instanceof ServerPlayerEntity)) {
-            return;
-        }
+        if (player.world.isRemote || !(player instanceof ServerPlayerEntity)) return;
 
-        // Obtém a chance de preservação
         float chance = getPreservationChance(this.tier);
-
-        // Se a chance for 0 ou a ferramenta não foi danificada (ex: quebrar terra com pá)
-        // Não fazemos nada.
         if (chance <= 0.0f) return;
 
-        // Verifica a chance
-        if (Math.random() < chance) {
-
-            // O dano JÁ FOI causado pelo evento de quebra.
-            // Para simular que o dano não ocorreu, reparamos 1 ponto de durabilidade.
-
-            // Verifica se a ferramenta já não está totalmente reparada
+        if (RANDOM.nextFloat() < chance) {
             if (tool.getDamage() > 0) {
-                // Diminui o dano em 1 (repara)
                 tool.setDamage(tool.getDamage() - 1);
-
-                // Dá feedback auditivo ao jogador
                 player.world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(),
                         SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 0.5F, 1.5F);
             }
@@ -89,7 +73,7 @@ public class ReinforcedPerk extends BasePerk {
 
         float chance = getPreservationChance(this.tier);
 
-        if (Math.random() < chance && tool.getDamage() > 0) {
+        if (RANDOM.nextFloat() < chance && tool.getDamage() > 0) {
             // Repara o dano de combate
             tool.setDamage(tool.getDamage() - 1);
             player.world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(),
