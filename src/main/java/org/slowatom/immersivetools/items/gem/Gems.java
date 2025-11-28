@@ -10,21 +10,21 @@ public class Gems extends Items {
     public static final RegistryObject<Item> LIGHTWEIGHT_GEM = ITEMS.register(
             "lightweight_gem",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.TOOLS)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.UNCOMMON)
             )
     );
     public static final RegistryObject<Item> REINFORCED_GEM = ITEMS.register(
             "reinforced_gem",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.TOOLS)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.RARE)
             )
     );
     public static final RegistryObject<Item> BLAZE_GEM = ITEMS.register(
             "blaze_gem",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.TOOLS)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.RARE)
             )
     );

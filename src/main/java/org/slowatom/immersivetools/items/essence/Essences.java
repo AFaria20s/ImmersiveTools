@@ -10,28 +10,28 @@ public class Essences extends Items {
     public static final RegistryObject<Item> ESSENCE = ITEMS.register(
             "essence",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.BREWING)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.COMMON)
             )
     );
     public static final RegistryObject<Item> REFINED_ESSENCE = ITEMS.register(
             "refined_essence",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.BREWING)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.UNCOMMON)
             )
     );
     public static final RegistryObject<Item> PURE_ESSENCE = ITEMS.register(
             "pure_essence",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.BREWING)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.RARE)
             )
     );
     public static final RegistryObject<Item> LEGENDARY_ESSENCE = ITEMS.register(
             "legendary_essence",
             () -> new Item(new Item.Properties()
-                    .group(ItemGroup.BREWING)
+                    .group(ItemGroup.MISC)
                     .rarity(Rarity.EPIC)
             )
     );
