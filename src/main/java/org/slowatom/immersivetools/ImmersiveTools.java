@@ -6,9 +6,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slowatom.immersivetools.events.WorldEvents;
+import org.slowatom.immersivetools.perks.Perk;
 import org.slowatom.immersivetools.perks.PerkHandler;
 import org.slowatom.immersivetools.perks.perkTypes.LightWeightPerk;
 import org.slowatom.immersivetools.items.Items;
+import org.slowatom.immersivetools.perks.perkTypes.ReinforcedPerk;
 
 @Mod(ImmersiveTools.MOD_ID)
 public class ImmersiveTools {
@@ -20,6 +22,7 @@ public class ImmersiveTools {
         Items.register(modEventBus);
 
         PerkHandler.register(new LightWeightPerk());
+        PerkHandler.register(new ReinforcedPerk());
 
         modEventBus.addListener(this::doClientStuff);
 

@@ -14,13 +14,13 @@ public class Gems extends Items {
                     .rarity(Rarity.UNCOMMON)
             )
     );
-    /*public static final RegistryObject<Item> VEIN_GEM = ITEMS.register(
-            "vein_gem",
+    public static final RegistryObject<Item> REINFORCED_GEM = ITEMS.register(
+            "reinforced_gem",
             () -> new Item(new Item.Properties()
                     .group(ItemGroup.TOOLS)
                     .rarity(Rarity.RARE)
             )
-    );*/
+    );
 
     public static void register() {}
 }
