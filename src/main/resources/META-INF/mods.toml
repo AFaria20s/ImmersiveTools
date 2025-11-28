@@ -6,23 +6,24 @@ loaderVersion="[32,)" #mandatory This is typically bumped every Minecraft versio
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="Apache 2.0"
 # A URL to refer people to when problems occur with this mod
-#issueTrackerURL="http://my.issue.tracker/" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]]
-modId="vancerstructures"
+modId="immersivetools"
 version="BETA-1.0.0"
-displayName="Vancer Structures"
-logoFile="vancer_logo.png"
+displayName="Immersive Tools"
+logoFile= "immt_logo.png"
 #credits=""
 authors="SlowAtom"
 description='''
 This mod enhances the user's vanilla minecraft experience
 
-by adding new structures respecting the Minecraft's vanilla experience!
+by adding new tools, perks and tiers that can apply to normal tools or the new tools and
+
+new ways of having fun! Either solo or with your friends!
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.vancerstructures]] #optional
+[[dependencies.immersivetools]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -34,7 +35,7 @@ by adding new structures respecting the Minecraft's vanilla experience!
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.vancerstructures]]
+[[dependencies.immersivetools]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

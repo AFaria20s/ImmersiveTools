@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "immersivetools:vein_gem"
+    ]
+  },
+  "criteria": {
+    "has_obsidian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:obsidian" }
+        ]
+      }
+    },
+    "has_ironIngot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:iron_ingot" }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_obsidian", "has_ironIngot"]
+  ]
+}

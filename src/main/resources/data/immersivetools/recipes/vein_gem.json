@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:cobblestone" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:obsidian" }
+  ],
+  "result": {
+    "item": "immersivetools:reinforced_gem",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:feather" },
+    { "item": "minecraft:iron_nugget" },
+    { "item": "minecraft:phantom_membrane" }
+  ],
+  "result": {
+    "item": "immersivetools:lightweight_gem",
+    "count": 1
+  }
+}

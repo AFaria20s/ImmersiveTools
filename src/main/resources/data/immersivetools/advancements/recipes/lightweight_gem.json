@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "immersivetools:lightweight_gem"
+    ]
+  },
+  "criteria": {
+    "has_feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:feather" }
+        ]
+      }
+    },
+    "has_membrane": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:phantom_membrane" }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_feather", "has_membrane"]
+  ]
+}
