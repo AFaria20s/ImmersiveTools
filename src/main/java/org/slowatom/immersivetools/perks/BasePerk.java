@@ -7,7 +7,10 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
+import java.util.Random;
+
 public abstract class BasePerk implements Perk {
+    protected static final Random RANDOM = new Random();
     protected int tier = 1;
 
     @Override

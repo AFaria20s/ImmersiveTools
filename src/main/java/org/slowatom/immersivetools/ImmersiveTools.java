@@ -10,6 +10,7 @@ import org.slowatom.immersivetools.perks.Perk;
 import org.slowatom.immersivetools.perks.PerkHandler;
 import org.slowatom.immersivetools.perks.perkTypes.LightWeightPerk;
 import org.slowatom.immersivetools.items.Items;
+import org.slowatom.immersivetools.perks.perkTypes.PurifyingTouchPerk;
 import org.slowatom.immersivetools.perks.perkTypes.ReinforcedPerk;
 
 @Mod(ImmersiveTools.MOD_ID)
@@ -23,6 +24,7 @@ public class ImmersiveTools {
 
         PerkHandler.register(new LightWeightPerk());
         PerkHandler.register(new ReinforcedPerk());
+        PerkHandler.register(new PurifyingTouchPerk());
 
         modEventBus.addListener(this::doClientStuff);
 

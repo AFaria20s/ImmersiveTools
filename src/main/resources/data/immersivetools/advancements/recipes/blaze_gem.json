@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "immersivetools:blaze_gem"
+    ]
+  },
+  "criteria": {
+    "has_blaze": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:blaze_rod" }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_blaze"]
+  ]
+}

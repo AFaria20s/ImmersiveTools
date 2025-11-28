@@ -21,6 +21,13 @@ public class Gems extends Items {
                     .rarity(Rarity.RARE)
             )
     );
+    public static final RegistryObject<Item> BLAZE_GEM = ITEMS.register(
+            "blaze_gem",
+            () -> new Item(new Item.Properties()
+                    .group(ItemGroup.TOOLS)
+                    .rarity(Rarity.RARE)
+            )
+    );
 
     public static void register() {}
 }
