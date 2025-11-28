@@ -3,8 +3,8 @@
 **Mod ID:** `immersivetools`
 
 **Version:** Minecraft Forge 1.16.5  
-**Author:** [AfonsoFaria20s](https://github.com/AFaris20s)  
-**Repository:** [AfonsoFaria20s/ImmersiveTools](https://github.com/AFaris20s/ImmersiveTools)
+**Author:** [AFaria20s](https://github.com/AFaria20s)  
+**Repository:** [AFaria20s/ImmersiveTools](https://github.com/AFaria20s/ImmersiveTools)
 
 ---
 
@@ -32,7 +32,7 @@
 ### For Players
 
 1. Download and install **[Minecraft Forge 1.16.5](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.16.5.html)**.
-2. Download the latest version of **Immersive Tools** from the [Releases](https://github.com/AFaris20s/ImmersiveTools/releases) page.
+2. Download the latest version of **Immersive Tools** from the [Releases](https://github.com/AFaria20s/ImmersiveTools/releases) page.
 3. Place the `.jar` file inside your Minecraft `mods` folder:
 ```.minecraft/mods```
 
@@ -47,7 +47,7 @@ If you want to contribute or modify the mod locally:
 1. **Clone the repository:**
 
 ```bash
-git clone [https://github.com/AfonsoFaria20s/ImmersiveTools.git](https://github.com/AFaris20s/ImmersiveTools.git)
+git clone [https://github.com/AFaria20s/ImmersiveTools.git](https://github.com/AFaria20s/ImmersiveTools.git)
 cd ImmersiveTools
 ```
 2. **Import the project** into your IDE (e.g. IntelliJ IDEA or Eclipse) as a Gradle project.
