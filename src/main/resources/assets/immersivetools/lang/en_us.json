@@ -1,6 +1,7 @@
 {
   "immersivetools.perk_applied": "Perk Applied!",
   "immersivetools.perk_failed": "Can't Apply the Perk!",
+  "immersivetools.perk_upgraded": "Perk Upgraded!",
 
   "immersivetools.perk.lightweight": "Light Weight",
   "immersivetools.perk.reinforced": "Reinforced",
@@ -8,5 +9,7 @@
   "item.immersivetools.lightweight_gem": "Light Weight Gem",
   "item.immersivetools.reinforced_gem": "Reinforced Gem",
   "item.immersivetools.essence": "Essence",
-  "item.immersivetools.refined_essence": "Refined Essence"
+  "item.immersivetools.refined_essence": "Refined Essence",
+  "item.immersivetools.pure_essence": "Pure Essence",
+  "item.immersivetools.legendary_essence": "Legendary Essence"
 }

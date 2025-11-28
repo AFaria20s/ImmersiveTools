@@ -21,6 +21,20 @@ public class Essences extends Items {
                     .rarity(Rarity.UNCOMMON)
             )
     );
+    public static final RegistryObject<Item> PURE_ESSENCE = ITEMS.register(
+            "pure_essence",
+            () -> new Item(new Item.Properties()
+                    .group(ItemGroup.BREWING)
+                    .rarity(Rarity.RARE)
+            )
+    );
+    public static final RegistryObject<Item> LEGENDARY_ESSENCE = ITEMS.register(
+            "legendary_essence",
+            () -> new Item(new Item.Properties()
+                    .group(ItemGroup.BREWING)
+                    .rarity(Rarity.EPIC)
+            )
+    );
 
     public static void register() {}
 }

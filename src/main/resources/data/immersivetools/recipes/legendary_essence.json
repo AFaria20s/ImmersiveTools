@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "DED",
+    "DND"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_block"
+    },
+    "D": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "E": {
+      "item": "immersivetools:pure_essence"
+    },
+    "N": {
+      "item": "minecraft:elytra"
+    }
+  },
+  "result": {
+    "item": "immersivetools:legendary_essence",
+    "count": 1
+  }
+}

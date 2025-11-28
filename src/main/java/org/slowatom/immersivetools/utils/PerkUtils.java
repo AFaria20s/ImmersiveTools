@@ -8,7 +8,7 @@ import org.slowatom.immersivetools.perks.PerkHandler;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map; // <-- IMPORTADO
+import java.util.Map;
 
 public class PerkUtils {
     private static final String PERK_TAG = "immersivetools_perks";
@@ -18,7 +18,9 @@ public class PerkUtils {
      * Esta é a chave para a escalabilidade.
      */
     private static final Map<Item, Integer> UPGRADE_CATALYSTS = Map.of(
-            Essences.REFINED_ESSENCE.get(), 2
+            Essences.REFINED_ESSENCE.get(), 2,
+            Essences.PURE_ESSENCE.get(), 3,
+            Essences.LEGENDARY_ESSENCE.get(), 4
     );
 
     /**
@@ -69,8 +71,8 @@ public class PerkUtils {
             return false; // Não é um item de upgrade
         }
 
-        int targetTier = UPGRADE_CATALYSTS.get(catalyst.getItem()); // Ex: 2 (de REFINED_ESSENCE)
-        int requiredTier = targetTier - 1; // Ex: 1
+        int targetTier = UPGRADE_CATALYSTS.get(catalyst.getItem());
+        int requiredTier = targetTier - 1;
 
         boolean upgradedSomething = false;
         List<Perk> currentPerks = getPerks(tool); // Pega todos os perks da ferramenta
@@ -124,8 +126,6 @@ public class PerkUtils {
                 // O seu código original estava a criar uma instância nova, o que é problemático.
                 // Esta implementação assume que PerkHandler.get(key) retorna um "protótipo"
                 // e .withTier() clona e define o tier.
-
-                // Vamos assumir que a sua implementação de .withTier() funciona como esperado.
                 perks.add(perk.withTier(tier));
             }
         }

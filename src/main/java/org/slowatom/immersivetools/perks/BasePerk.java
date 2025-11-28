@@ -23,7 +23,7 @@ public abstract class BasePerk implements Perk {
 
     @Override
     public int getMaxTier() {
-        return 2;
+        return 3;
     }
 
     // Event Methods

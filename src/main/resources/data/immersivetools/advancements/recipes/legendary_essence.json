@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "immersivetools:legendary_essence"
+    ]
+  },
+  "criteria": {
+    "has_essence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:pure_essence" }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_essence"]
+  ]
+}
