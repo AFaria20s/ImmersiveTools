@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "immersivetools:item/vein_gem"
+    "layer0": "immersivetools:item/reinforced_gem"
   }
 }

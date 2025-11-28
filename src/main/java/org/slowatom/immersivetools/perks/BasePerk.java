@@ -27,8 +27,15 @@ public abstract class BasePerk implements Perk {
     }
 
     // Event Methods
-    public void onBlockBreak(PlayerEntity player, ItemStack tool, BlockEvent.BreakEvent event) {}
-    public void onAttack(PlayerEntity player, ItemStack tool, AttackEntityEvent event) {}
-    public void onBreakSpeed(PlayerEvent.BreakSpeed event) {}
-    public void onRightClick(PlayerInteractEvent.RightClickItem event) {}
+    public void onBlockBreak(PlayerEntity player, ItemStack tool, BlockEvent.BreakEvent event) {
+    }
+
+    public void onAttack(PlayerEntity player, ItemStack tool, AttackEntityEvent event) {
+    }
+
+    public void onBreakSpeed(PlayerEvent.BreakSpeed event) {
+    }
+
+    public void onRightClick(PlayerInteractEvent.RightClickItem event) {
+    }
 }

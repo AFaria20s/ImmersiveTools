@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "immersivetools:vein_gem"
+      "immersivetools:reinforced_gem"
     ]
   },
   "criteria": {
