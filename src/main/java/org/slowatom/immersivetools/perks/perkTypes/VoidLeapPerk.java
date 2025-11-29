@@ -47,23 +47,36 @@ public class VoidLeapPerk extends BasePerk {
     public void onRightClick(PlayerInteractEvent.RightClickItem event) {
         PlayerEntity player = event.getPlayer();
         ItemStack tool = event.getItemStack();
-        int durabilityCost = 2 * this.tier;
+
+        int durabilityCost = 5 + this.tier;
+
+        int cooldownTicks = 60 - (this.tier * 10);
+        if (cooldownTicks < 5) cooldownTicks = 5;
 
         if (player.world.isRemote || !(player instanceof ServerPlayerEntity)) return;
+        if (player.getCooldownTracker().hasCooldown(this.getCatalystItem())) return;
+        if (!player.isOnGround()) return;
         if (!player.isSneaking()) return;
         if (tool.getDamage() + durabilityCost >= tool.getMaxDamage()) return;
 
-        // getLookVec() gives the direction (x, y, z)
+
+        // --- CÁLCULO DE FORÇA (VETOR EQUILIBRADO) ---
         Vector3d lookVector = player.getLookVec();
 
-        double forwardForce = 1.0;
-        double upwardForce = 0.6;
+        // Base de 0.8 + 0.15 por Tier (T5 = 0.8 + 0.75 = 1.55)
+        double forwardForce = 0.8 + (this.tier * 0.15);
 
+        // Base de 0.5 + 0.10 por Tier (T5 = 0.5 + 0.5 = 1.0)
+        double upwardForce = 0.5 + (this.tier * 0.10);
+
+        // Aplicar a velocidade
         player.addVelocity(
                 lookVector.x * forwardForce,
                 upwardForce,
                 lookVector.z * forwardForce
         );
+
+        player.getCooldownTracker().setCooldown(this.getCatalystItem(), cooldownTicks);
 
         player.velocityChanged = true;
         player.fallDistance = 0.0F;
