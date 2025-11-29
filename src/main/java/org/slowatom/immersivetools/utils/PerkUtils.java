@@ -20,7 +20,8 @@ public class PerkUtils {
     private static final Map<Item, Integer> UPGRADE_CATALYSTS = Map.of(
             Essences.REFINED_ESSENCE.get(), 2,
             Essences.PURE_ESSENCE.get(), 3,
-            Essences.LEGENDARY_ESSENCE.get(), 4
+            Essences.LEGENDARY_ESSENCE.get(), 4,
+            Essences.DIVINE_ESSENCE.get(), 5
     );
 
     /**

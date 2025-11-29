@@ -3,6 +3,7 @@ package org.slowatom.immersivetools.perks.perkTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipe;
@@ -35,7 +36,7 @@ public class PurifyingTouchPerk extends BasePerk {
 
     @Override
     public int getMaxTier() {
-        return 4;
+        return 5;
     }
 
     /**
@@ -46,12 +47,13 @@ public class PurifyingTouchPerk extends BasePerk {
             case 1:
                 return 0.10f; // 10%
             case 2:
-                return 0.20f; // 30%
+                return 0.30f; // 30%
             case 3:
-                return 0.30f; // 50%
+                return 0.50f; // 50%
             case 4:
-                return 0.40f; // 75%
-            //case 5: return 0.50f; // 100%
+                return 0.75f; // 75%
+            case 5:
+                return 0.100f; // 100%
             default:
                 return 0.0f;
         }
@@ -64,10 +66,11 @@ public class PurifyingTouchPerk extends BasePerk {
             case 2:
                 return 0.20f; // 20%
             case 3:
-                return 0.30f; // 30%
+                return 0.35f; // 35%
             case 4:
-                return 0.40f; // 40%
-            //case 5: return 0.50f; // 50%
+                return 0.55f; // 55%
+            case 5:
+                return 0.70f; // 70%
             default:
                 return 0.0f;
         }
@@ -85,25 +88,29 @@ public class PurifyingTouchPerk extends BasePerk {
         float chance = getSmelterChance(this.tier);
 
         if (RANDOM.nextFloat() < chance) {
+
             ItemStack inputStack = new ItemStack(event.getState().getBlock());
+            Inventory tempInventory = new Inventory(inputStack);
 
-            world.getRecipeManager().getRecipe(IRecipeType.SMELTING, player.inventory, world)
-                    .ifPresent(recipe -> {
-                        if (recipe instanceof FurnaceRecipe) {
-                            ItemStack resultStack = ((FurnaceRecipe) recipe).getRecipeOutput();
+            world.getRecipeManager()
+                .getRecipe(IRecipeType.SMELTING, tempInventory, world)
+                .ifPresent(recipe -> {
+                    if (recipe instanceof FurnaceRecipe) {
+                        ItemStack resultStack = recipe.getRecipeOutput();
 
-                            if (!resultStack.isEmpty()) {
-                                BlockPos pos = event.getPos();
-                                event.setCanceled(true);
+                        if (!resultStack.isEmpty()) {
+                            BlockPos pos = event.getPos();
+                            event.setCanceled(true);
 
-                                if (!world.isRemote) {
-                                    net.minecraft.inventory.InventoryHelper.spawnItemStack(
-                                            world, pos.getX(), pos.getY(), pos.getZ(), resultStack.copy()
-                                    );
-                                }
+                            if (!world.isRemote) {
+                                world.setBlockState(pos, net.minecraft.block.Blocks.AIR.getDefaultState(), 3);
+                                net.minecraft.inventory.InventoryHelper.spawnItemStack(
+                                        world, pos.getX(), pos.getY(), pos.getZ(), resultStack.copy()
+                                );
                             }
                         }
-                    });
+                    }
+                });
         }
     }
 

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "immersivetools:void_gem"
+    ]
+  },
+  "criteria": {
+    "has_obsidian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:obsidian" }
+        ]
+      }
+    },
+    "has_endstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "minecraft:end_stone" }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_obsidian", "has_endstone"]
+  ]
+}

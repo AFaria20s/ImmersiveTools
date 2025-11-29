@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "DLD",
+    "DHD"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:nether_star"
+    },
+    "L": {
+      "item": "immersivetools:legendary_essence"
+    },
+    "H": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "D": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "immersivetools:divine_essence",
+    "count": 1
+  }
+}

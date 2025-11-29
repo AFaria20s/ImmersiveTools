@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "DED",
+    "AAA"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_block"
+    },
+    "A": {
+      "item": "minecraft:end_stone"
+    },
+    "D": {
+      "item": "minecraft:netherite_block"
+    },
+    "E": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "immersivetools:void_gem",
+    "count": 1
+  }
+}
