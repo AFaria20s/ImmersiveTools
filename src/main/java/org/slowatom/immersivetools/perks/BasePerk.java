@@ -1,7 +1,7 @@
 package org.slowatom.immersivetools.perks;
 
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -12,6 +12,15 @@ import java.util.Random;
 public abstract class BasePerk implements Perk {
     protected static final Random RANDOM = new Random();
     protected int tier = 1;
+
+    @Override
+    public boolean canApplyTo(ItemStack stack) {
+        return  stack.getItem() instanceof SwordItem    ||
+                stack.getItem() instanceof PickaxeItem  ||
+                stack.getItem() instanceof AxeItem      ||
+                stack.getItem() instanceof ShovelItem   ||
+                stack.getItem() instanceof HoeItem      ;
+    }
 
     @Override
     public int getTier() {

@@ -51,6 +51,8 @@ public class PerkUtils {
             if (perk.getCatalystItem().equals(catalyst.getItem()) &&
                     !hasPerk(tool, perk.getId())) {
 
+                if(!perk.canApplyTo(tool)) return false;
+
                 // Aplica o Nível 1
                 PerkUtils.addPerk(tool, perk.getId(), 1);
                 return true;

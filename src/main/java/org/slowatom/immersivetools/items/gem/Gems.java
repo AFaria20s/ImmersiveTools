@@ -28,6 +28,13 @@ public class Gems extends Items {
                     .rarity(Rarity.RARE)
             )
     );
+    public static final RegistryObject<Item> VOID_GEM = ITEMS.register(
+            "void_gem",
+            () -> new Item(new Item.Properties()
+                    .group(ItemGroup.MISC)
+                    .rarity(Rarity.EPIC)
+            )
+    );
 
     public static void register() {}
 }

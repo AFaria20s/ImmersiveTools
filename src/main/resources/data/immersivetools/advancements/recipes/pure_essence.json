@@ -10,7 +10,7 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "minecraft:refined_essence" }
+          { "item": "immersivetools:refined_essence" }
         ]
       }
     }

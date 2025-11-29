@@ -6,10 +6,12 @@
   "immersivetools.perk.lightweight": "Lightweight",
   "immersivetools.perk.reinforced": "Reinforced",
   "immersivetools.perk.purifyingtouch": "Purifying Touch",
+  "immersivetools.perk.voidleap": "Void Leap",
 
   "item.immersivetools.lightweight_gem": "Light Weight Gem",
   "item.immersivetools.reinforced_gem": "Reinforced Gem",
   "item.immersivetools.blaze_gem": "Blaze Gem",
+  "item.immersivetools.void_gem": "Void Gem",
 
   "item.immersivetools.essence": "Essence",
   "item.immersivetools.refined_essence": "Refined Essence",

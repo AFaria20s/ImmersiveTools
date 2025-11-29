@@ -28,8 +28,17 @@ public class PerkEvents {
         ItemStack catalyst = player.getHeldItem(Hand.OFF_HAND);
         ItemStack tool = player.getHeldItemMainhand();
 
-        // Se a mão principal ou a secundária estiverem vazias, não faz nada.
-        if (tool.isEmpty() || catalyst.isEmpty()) return;
+        // If the player does not have the tool in the main hand,
+        // there is no need to continue with the event
+        if (tool.isEmpty()) return;
+
+        // First do the perk events
+        List<Perk> perks = PerkUtils.getPerks(tool);
+        for (Perk perk : perks) {
+            perk.onRightClick(event);
+        }
+
+        if(catalyst.isEmpty()) return;
 
         boolean success = false;
         String messageKey = "";
@@ -70,12 +79,6 @@ public class PerkEvents {
 
             event.setCanceled(true);
             return; // Termina o evento aqui
-        }
-
-        // Se nenhuma ação de aplicação/upgrade foi feita, executa a lógica normal dos perks
-        List<Perk> perks = PerkUtils.getPerks(tool);
-        for (Perk perk : perks) {
-            perk.onRightClick(event);
         }
     }
 

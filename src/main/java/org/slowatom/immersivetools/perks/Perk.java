@@ -14,8 +14,8 @@ public interface Perk {
     String getDisplayName();
     int getTier();
     Perk withTier(int tier);
-
     int getMaxTier();
+    boolean canApplyTo(ItemStack stack);
 
     // Event Methods
     void onBlockBreak(PlayerEntity player, ItemStack tool, BlockEvent.BreakEvent event);
