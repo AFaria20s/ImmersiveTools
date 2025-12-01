@@ -1,0 +1,21 @@
+{
+  "immersivetools.perk_applied": "附魔已应用!",
+  "immersivetools.perk_failed": "无法应用附魔!",
+  "immersivetools.perk_upgraded": "附魔已升级!",
+
+  "immersivetools.perk.lightweight": "轻盈",
+  "immersivetools.perk.reinforced": "强化防护",
+  "immersivetools.perk.purifyingtouch": "净化之触",
+  "immersivetools.perk.voidleap": "虚空跳跃",
+
+  "item.immersivetools.lightweight_gem": "轻盈之宝石",
+  "item.immersivetools.reinforced_gem": "强化之宝石",
+  "item.immersivetools.blaze_gem": "烈焰之宝石",
+  "item.immersivetools.void_gem": "虚空之宝石",
+
+  "item.immersivetools.essence": "精粹",
+  "item.immersivetools.refined_essence": "精炼精粹",
+  "item.immersivetools.pure_essence": "纯净精粹",
+  "item.immersivetools.legendary_essence": "传说精粹",
+  "item.immersivetools.divine_essence": "神圣精粹"
+}

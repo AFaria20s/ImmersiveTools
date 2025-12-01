@@ -1,0 +1,21 @@
+{
+  "immersivetools.perk_applied": "Перк применен!",
+  "immersivetools.perk_failed": "Невозможно применить перк!",
+  "immersivetools.perk_upgraded": "Перк улучшен!",
+
+  "immersivetools.perk.lightweight": "Легкий Вес",
+  "immersivetools.perk.reinforced": "Усиленное Сохранение",
+  "immersivetools.perk.purifyingtouch": "Очищающее Касание",
+  "immersivetools.perk.voidleap": "Прыжок Пустоты",
+
+  "item.immersivetools.lightweight_gem": "Самоцвет Легкого Веса",
+  "item.immersivetools.reinforced_gem": "Усиленный Самоцвет",
+  "item.immersivetools.blaze_gem": "Огненный Самоцвет",
+  "item.immersivetools.void_gem": "Самоцвет Пустоты",
+
+  "item.immersivetools.essence": "Эссенция",
+  "item.immersivetools.refined_essence": "Очищенная Эссенция",
+  "item.immersivetools.pure_essence": "Чистая Эссенция",
+  "item.immersivetools.legendary_essence": "Легендарная Эссенция",
+  "item.immersivetools.divine_essence": "Божественная Эссенция"
+}

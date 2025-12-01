@@ -1,0 +1,21 @@
+{
+  "immersivetools.perk_applied": "Avantage appliqué !",
+  "immersivetools.perk_failed": "Impossible d'appliquer l'avantage !",
+  "immersivetools.perk_upgraded": "Avantage amélioré !",
+
+  "immersivetools.perk.lightweight": "Poids Plume",
+  "immersivetools.perk.reinforced": "Préservation Renforcée",
+  "immersivetools.perk.purifyingtouch": "Toucher Purificateur",
+  "immersivetools.perk.voidleap": "Saut du Vide",
+
+  "item.immersivetools.lightweight_gem": "Gemme Poids Plume",
+  "item.immersivetools.reinforced_gem": "Gemme Renforcée",
+  "item.immersivetools.blaze_gem": "Gemme de Flamme",
+  "item.immersivetools.void_gem": "Gemme du Vide",
+
+  "item.immersivetools.essence": "Essence",
+  "item.immersivetools.refined_essence": "Essence Raffinée",
+  "item.immersivetools.pure_essence": "Essence Pure",
+  "item.immersivetools.legendary_essence": "Essence Légendaire",
+  "item.immersivetools.divine_essence": "Essence Divine"
+}

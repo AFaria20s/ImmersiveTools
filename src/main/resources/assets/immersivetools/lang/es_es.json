@@ -1,0 +1,21 @@
+{
+  "immersivetools.perk_applied": "¡Habilidad Aplicada!",
+  "immersivetools.perk_failed": "¡No se Puede Aplicar la Habilidad!",
+  "immersivetools.perk_upgraded": "¡Habilidad Mejorada!",
+
+  "immersivetools.perk.lightweight": "Peso Ligero",
+  "immersivetools.perk.reinforced": "Preservación Reforzada",
+  "immersivetools.perk.purifyingtouch": "Toque Purificador",
+  "immersivetools.perk.voidleap": "Salto del Vacío",
+
+  "item.immersivetools.lightweight_gem": "Gema de Peso Ligero",
+  "item.immersivetools.reinforced_gem": "Gema Reforzada",
+  "item.immersivetools.blaze_gem": "Gema de Fuego",
+  "item.immersivetools.void_gem": "Gema del Vacío",
+
+  "item.immersivetools.essence": "Esencia",
+  "item.immersivetools.refined_essence": "Esencia Refinada",
+  "item.immersivetools.pure_essence": "Esencia Pura",
+  "item.immersivetools.legendary_essence": "Esencia Legendaria",
+  "item.immersivetools.divine_essence": "Esencia Divina"
+}
