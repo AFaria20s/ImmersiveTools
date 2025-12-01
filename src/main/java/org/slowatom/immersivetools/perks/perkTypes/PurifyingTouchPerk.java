@@ -11,6 +11,7 @@ import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
@@ -87,30 +88,46 @@ public class PurifyingTouchPerk extends BasePerk {
         World world = player.world;
         float chance = getSmelterChance(this.tier);
 
+        // BUG FIX: O tier 5 está a usar 0.100f, que é apenas 10%.
+        // Se o objetivo é 100%, deve ser 1.0f.
+        if (this.tier == 5 && chance < 1.0f) {
+            chance = 1.0f;
+        }
+
+        // Teste de Chance
         if (RANDOM.nextFloat() < chance) {
 
             ItemStack inputStack = new ItemStack(event.getState().getBlock());
             Inventory tempInventory = new Inventory(inputStack);
 
             world.getRecipeManager()
-                .getRecipe(IRecipeType.SMELTING, tempInventory, world)
-                .ifPresent(recipe -> {
-                    if (recipe instanceof FurnaceRecipe) {
-                        ItemStack resultStack = recipe.getRecipeOutput();
+                    .getRecipe(IRecipeType.SMELTING, tempInventory, world)
+                    .ifPresent(recipe -> {
+                        if (recipe instanceof FurnaceRecipe) {
 
-                        if (!resultStack.isEmpty()) {
-                            BlockPos pos = event.getPos();
-                            event.setCanceled(true);
+                            // O resultado da receita é um clone seguro
+                            ItemStack resultStack = recipe.getRecipeOutput();
 
-                            if (!world.isRemote) {
-                                world.setBlockState(pos, net.minecraft.block.Blocks.AIR.getDefaultState(), 3);
-                                net.minecraft.inventory.InventoryHelper.spawnItemStack(
-                                        world, pos.getX(), pos.getY(), pos.getZ(), resultStack.copy()
-                                );
+                            if (!resultStack.isEmpty()) {
+                                BlockPos pos = event.getPos();
+                                event.setCanceled(true);
+
+                                if (!world.isRemote) {
+
+                                    // 1. Destruir o Bloco (No Servidor)
+                                    world.setBlockState(pos, net.minecraft.block.Blocks.AIR.getDefaultState(), 3);
+
+                                    // 2. Fazer Spawn do Item Fundido
+                                    net.minecraft.inventory.InventoryHelper.spawnItemStack(
+                                            world, pos.getX(), pos.getY(), pos.getZ(), resultStack.copy()
+                                    );
+
+                                    // 3. Adicionar o Feedback Sonoro (CRUCIAL para a Sincronização Cliente/Servidor)
+                                    player.world.playSound(null, pos, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                }
                             }
                         }
-                    }
-                });
+                    });
         }
     }
 

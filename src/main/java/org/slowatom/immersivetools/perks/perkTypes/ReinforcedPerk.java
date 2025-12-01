@@ -58,15 +58,12 @@ public class ReinforcedPerk extends BasePerk {
         if (RANDOM.nextFloat() < chance) {
             if (tool.getDamage() > 0) {
                 tool.setDamage(tool.getDamage() - 1);
-                player.world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(),
-                        SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 0.5F, 1.5F);
             }
         }
     }
 
    @Override
     public void onAttack(PlayerEntity player, ItemStack tool, AttackEntityEvent event) {
-        // Mesma lógica que onBlockBreak, mas executada no evento de ataque
         if (player.world.isRemote || !(player instanceof ServerPlayerEntity)) {
             return;
         }
@@ -74,10 +71,7 @@ public class ReinforcedPerk extends BasePerk {
         float chance = getPreservationChance(this.tier);
 
         if (RANDOM.nextFloat() < chance && tool.getDamage() > 0) {
-            // Repara o dano de combate
             tool.setDamage(tool.getDamage() - 1);
-            player.world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(),
-                    SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 0.5F, 1.5F);
         }
     }
 }
